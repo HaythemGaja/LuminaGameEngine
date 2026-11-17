@@ -14,7 +14,7 @@ class LanguageManager {
         this.defaultLanguage = 'pt-BR';
 
         // Idioma atual (carrega do localStorage ou usa padrão)
-        this.currentLanguage = this.loadLanguagePreference() || this.defaultLanguage;
+        this.currentLanguage = this.loadLanguagePreference() || 'en';
 
         // Idiomas suportados
         this.supportedLanguages = {

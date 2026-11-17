@@ -85,11 +85,11 @@
 <body>
     <div id="loading-screen">
         <div class="spinner"></div>
-        <h2 id="loading-text">Carregando Jogo...</h2>
+        <h2 id="loading-text">Loading Game...</h2>
     </div>
 
     <div id="ui-layer">
-        <button id="btn-fullscreen" class="btn">⛶ Tela Cheia</button>
+        <button id="btn-fullscreen" class="btn">⛶ Fullscreen</button>
     </div>
 
     <canvas id="game-canvas"></canvas>
@@ -173,11 +173,11 @@
             try {
                 // Carregar Projeto
                 const response = await fetch('project.json');
-                if (!response.ok) throw new Error('Arquivo do projeto não encontrado');
+                if (!response.ok) throw new Error('Project file not found');
                 const projectData = await response.json();
 
                 // 1. Carregar Assets
-                document.getElementById('loading-text').textContent = 'Carregando Assets...';
+                document.getElementById('loading-text').textContent = 'Loading Assets...';
                 if (projectData.assets) {
                     await assetManager.loadAssets(projectData.assets);
                 }
@@ -262,7 +262,7 @@
 
             } catch (err) {
                 console.error(err);
-                document.getElementById('loading-text').textContent = 'Erro: ' + err.message;
+                document.getElementById('loading-text').textContent = 'Error: ' + err.message;
                 document.getElementById('loading-text').style.color = '#ff6b6b';
             }
 

@@ -15,7 +15,7 @@
 <body>
     <div id="loading">
         <div class="spinner"></div>
-        <p>Carregando Jogo...</p>
+        <p>Loading Game...</p>
     </div>
     
     <canvas id="game-canvas"></canvas>
@@ -170,7 +170,7 @@
 
             } catch (e) {
                 console.error('Erro fatal ao iniciar jogo:', e);
-                document.getElementById('loading').innerHTML = '<p style="color:red">Erro ao iniciar jogo.<br>Verifique o console (F12).</p>';
+                document.getElementById('loading').innerHTML = '<p style="color:red">Error starting the game.<br>Check the console (F12).</p>';
             }
         }
 
